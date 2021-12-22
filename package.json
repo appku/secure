@@ -1,0 +1,47 @@
+{
+    "name": "@appku/secure",
+    "version": "0.5.0",
+    "description": "A utility library to provide cryptographic functionality to the AppKu ecosystem of tools and apps.",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:appku/secure.git"
+    },
+    "bugs": {
+        "url": "https://github.com/appku/secure/issues"
+    },
+    "keywords": [
+        "cryptography",
+        "utility"
+    ],
+    "author": "Append Media, LLC",
+    "license": "SEE LICENSE IN LICENSE",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky install",
+        "start-docs": "node cli.js ./docs",
+        "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --verbose --coverage",
+        "test-ci": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --verbose -ci",
+        "lint": "./node_modules/.bin/eslint ./",
+        "docs": "./node_modules/jsdoc/jsdoc.js -c jsdoc.json --readme README.md"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "testPathIgnorePatterns": [
+            "/node_modules/"
+        ]
+    },
+    "engines": {
+        "node": ">=14"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.2",
+        "eslint": "^8.1.0",
+        "eslint-plugin-jest": "^25.2.2",
+        "husky": "^7.0.4",
+        "jest": "^27.3.1",
+        "jsdoc": "^3.6.7",
+        "jsdoc-plugin-intersection": "^1.0.4",
+        "tidy-jsdoc": "^1.4.0"
+    }
+}
